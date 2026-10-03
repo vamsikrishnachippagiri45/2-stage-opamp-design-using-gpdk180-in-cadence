@@ -24,13 +24,13 @@ The main objectives of this project are:
 An operational amplifier is a differential voltage amplifier with high voltage gain. The output voltage is ideally proportional to the difference between the two input voltages:
 
 \[
-V_{id}=V_{in+}-V_{in-}
+Vid=Vin+-Vin-
 \]
 
 The open-loop output voltage can be expressed as:
 
 \[
-V_{out}=A_v(V_{in+}-V_{in-})
+Vout=A_v(Vin+-Vin-)
 \]
 
 where \(A_v\) is the open-loop differential voltage gain.
