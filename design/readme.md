@@ -29,7 +29,7 @@ A two-stage Miller-compensated CMOS operational amplifier consisting of an NMOS 
 
 ## Design Methodology
 
-### 1. Miller Compensation Capacitor and Slew Rate Constraint
+###  Miller Compensation Capacitor and Slew Rate Constraint
 
 The initial design parameters obtained from the compensation and slew-rate requirements are:
 
@@ -45,7 +45,7 @@ The initial design parameters obtained from the compensation and slew-rate requi
 
 <img width="820" height="647" alt="image" src="https://github.com/user-attachments/assets/a159b059-be1e-4b06-96ea-cde53b9b1672" />
 
-### 2. Design of Differential Input Transistors (M1) and (M2)
+### Design of Differential Input Transistors (M1) and (M2)
 
 | Parameter | Value |
 |-----------|------:|
