@@ -45,5 +45,144 @@ The initial design parameters obtained from the compensation and slew-rate requi
 
 <img width="820" height="647" alt="image" src="https://github.com/user-attachments/assets/a159b059-be1e-4b06-96ea-cde53b9b1672" />
 
+## 3. Design of Differential Input Transistors \(M_1\) and \(M_2\)
+
+The NMOS transistors \(M_1\) and \(M_2\) form the differential input pair of the first gain stage.
+
+The required transconductance \(g_m\) is determined from the target gain-bandwidth product and the Miller compensation capacitor.
+
+### 3.1 Required Transconductance
+
+For a Miller-compensated two-stage Op-Amp, the unity-gain bandwidth is approximately:
+
+\[
+GBW \approx \frac{g_{m1}}{2\pi C_C}
+\]
+
+Therefore,
+
+\[
+g_{m1}=2\pi \times GBW \times C_C
+\]
+
+Using the design specifications:
+
+\[
+GBW=30\,MHz
+\]
+
+and
+
+\[
+C_C=900\,fF
+\]
+
+we obtain:
+
+\[
+g_{m1}
+=
+2\pi(30\times10^6)(900\times10^{-15})
+\]
+
+\[
+\boxed{g_{m1}\approx170\,\mu S}
+\]
+
+The design calculation gives approximately \(170\text{--}180\,\mu S\), and therefore:
+
+\[
+\boxed{g_{m1}\approx180\,\mu S}
+\]
+
+---
+
+### 3.2 Determination of \(W/L\)
+
+For an NMOS transistor operating in saturation:
+
+\[
+g_m=\sqrt{2\mu_n C_{ox}\left(\frac{W}{L}\right)I_D}
+\]
+
+Rearranging:
+
+\[
+\left(\frac{W}{L}\right)
+=
+\frac{g_m^2}
+{2\mu_n C_{ox}I_D}
+\]
+
+For the differential pair, the tail current is approximately:
+
+\[
+I_5=20\,\mu A
+\]
+
+At zero differential input, the tail current is equally divided between \(M_1\) and \(M_2\):
+
+\[
+I_{D1}=I_{D2}=\frac{I_5}{2}
+\]
+
+Hence,
+
+\[
+2I_D=I_5=20\,\mu A
+\]
+
+Using the technology parameter:
+
+\[
+\mu_nC_{ox}=370\,\mu A/V^2
+\]
+
+the required aspect ratio is calculated as:
+
+\[
+\left(\frac{W}{L}\right)_{1,2}
+=
+\frac{(180\,\mu S)^2}
+{(370\,\mu A/V^2)(20\,\mu A)}
+\]
+
+\[
+\left(\frac{W}{L}\right)_{1,2}
+\approx4.4
+\]
+
+A practical design value of approximately:
+
+\[
+\boxed{\left(\frac{W}{L}\right)_{1,2}\approx5}
+\]
+
+is selected for \(M_1\) and \(M_2\).
+
+---
+
+### 3.3 Differential Pair Design Summary
+
+| Parameter | Value |
+|-----------|------:|
+| Target GBW | 30 MHz |
+| Miller capacitor \(C_C\) | 900 fF |
+| Required \(g_m\) | ≈ 180 µS |
+| Tail current \(I_5\) | 20 µA |
+| Current per input transistor | ≈ 10 µA |
+| \(\mu_n C_{ox}\) | 370 µA/V² |
+| Calculated \((W/L)_{1,2}\) | ≈ 4.4 |
+| Selected \((W/L)_{1,2}\) | ≈ 5 |
+
+Thus, \(M_1\) and \(M_2\) are designed with an aspect ratio of approximately:
+
+\[
+\boxed{(W/L)_{M1,M2}=5}
+\]
+
+The following handwritten calculation shows the design of the differential input transistors.
+
+<img width="606" height="482" alt="Screenshot 2026-10-04 002347" src="https://github.com/user-attachments/assets/6ee4d958-66bf-4248-bb10-330b259ceca0" />
 
 
