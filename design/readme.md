@@ -17,8 +17,8 @@ The target specifications are listed below:
 | Positive ICMR | ≥ 1.6 V |
 | Negative ICMR | ≤ 0.6 V |
 | Load Capacitance, \(C_L\) | 1.5 pF |
-| \(\mu_n C_{ox}\) | 370 µA/V² |
-| \(\mu_p C_{ox}\) | 56 µA/V² |
+| (u_n Cox) | 370 µA/V² |
+| (u_p Cox) | 56 µA/V² |
 
 
 
