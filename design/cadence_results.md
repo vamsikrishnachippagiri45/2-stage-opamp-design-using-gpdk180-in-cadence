@@ -1,6 +1,9 @@
 
 ## Cadence Virtuoso Implementation
 
+<img width="1415" height="576" alt="Screenshot 2026-10-03 232337" src="https://github.com/user-attachments/assets/97294bed-ea53-4966-adc2-8bc0ca88c1cc" />
+
+
 The designed two-stage CMOS Op-Amp was implemented at transistor level using **Cadence Virtuoso** with the **GPDK 180 nm CMOS technology**.
 
 The schematic consists of the following devices:
