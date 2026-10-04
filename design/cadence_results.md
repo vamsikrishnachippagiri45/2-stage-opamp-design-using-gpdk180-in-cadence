@@ -41,7 +41,7 @@ From the simulated frequency response:
 - The low-frequency open-loop gain is approximately **52.95 dB**.
 - The gain crosses **0 dB** at approximately **24.57 MHz**.
 - The phase at the unity-gain frequency is approximately **81.01°**.
-- Therefore, the simulated phase margin is approximately **81°**.
+- Therefore, the phase margin is approximately **81°**.
 
 | Parameter | Target | Simulated Result |
 |-----------|-------:|-----------------:|
@@ -53,9 +53,9 @@ From the simulated frequency response:
 
 The simulated low-frequency gain is:
 
-\[
-A_v \approx 52.95\,dB
-\]
+$$
+A_v \approx 52.95\ \text{dB}
+$$
 
 The gain decreases with increasing frequency due to the dominant-pole behavior introduced by the Miller compensation.
 
@@ -63,9 +63,9 @@ The gain decreases with increasing frequency due to the dominant-pole behavior i
 
 The magnitude response crosses 0 dB at approximately:
 
-\[
-\boxed{f_{UGB}\approx24.57\,MHz}
-\]
+$$
+f_{UGB} \approx 24.57\ \text{MHz}
+$$
 
 This represents the simulated unity-gain bandwidth of the Op-Amp.
 
@@ -73,23 +73,39 @@ This represents the simulated unity-gain bandwidth of the Op-Amp.
 
 At the unity-gain frequency, the phase is approximately:
 
-\[
-\phi(f_{UGB})\approx81.01^\circ
-\]
+$$
+\phi(f_{UGB}) \approx 81.01^\circ
+$$
 
-The phase margin is therefore approximately:
+Therefore, the phase margin is:
 
-\[
-\boxed{PM\approx81^\circ}
-\]
+$$
+PM \approx 81^\circ
+$$
 
-Since:
+The required phase margin was:
 
-\[
-PM > 60^\circ
-\]
+$$
+PM \geq 60^\circ
+$$
 
-the design satisfies the specified phase-margin requirement.
+Hence, the simulated design satisfies the phase-margin requirement:
+
+$$
+81^\circ > 60^\circ
+$$
+
+### Performance Against Specifications
+
+The simulation results show that the design achieves a phase margin greater than the specified minimum. However, the simulated DC gain and unity-gain bandwidth are slightly lower than their respective target values.
+
+| Parameter | Specification | Simulation | Deviation |
+|-----------|--------------:|-----------:|----------:|
+| DC Gain | 55 dB | 52.95 dB | -2.05 dB |
+| GBW | 30 MHz | 24.57 MHz | -5.43 MHz |
+| Phase Margin | ≥ 60° | 81.01° | +21.01° |
+
+Overall, the initial design provides stable operation with adequate phase margin, while further optimization can be performed to improve the DC gain and GBW.
 
 ### Cadence AC Simulation
 
